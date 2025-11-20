@@ -1,12 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Code, Users, Sparkles, Target } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ShoppingCart, Zap, TrendingUp, Palette } from 'lucide-react';
 import { useState } from 'react';
 
 type Section = 'home' | 'work' | 'about' | 'contact';
 
-export default function GrasshopperCaseStudy() {
+export default function MrGreenCaseStudy() {
   const [currentSection, setCurrentSection] = useState<Section>('home');
 
   return (
@@ -33,14 +33,14 @@ export default function GrasshopperCaseStudy() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <div className="inline-block px-4 py-2 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-400 text-sm font-semibold mb-6">
-              Education Technology • 2019-2021
+            <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-semibold mb-6">
+              E-Commerce Development • 2023
             </div>
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
-              Google <span className="text-emerald-400">Grasshopper</span>
+              Mr. <span className="text-green-400">Green</span>
             </h1>
             <p className="text-2xl text-gray-300 max-w-3xl mx-auto">
-              Gamifying computer science education to teach millions of learners worldwide how to code through interactive storytelling
+              Transforming a fashion brand's digital presence through strategic platform migration and modern e-commerce development
             </p>
           </motion.div>
 
@@ -52,8 +52,8 @@ export default function GrasshopperCaseStudy() {
             className="relative h-[500px] rounded-3xl overflow-hidden border border-gray-700/50 shadow-2xl"
           >
             <img
-              src="/grasshopper.png"
-              alt="Google Grasshopper interface"
+              src="/mrgreen.png"
+              alt="Mr. Green e-commerce platform"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -67,16 +67,16 @@ export default function GrasshopperCaseStudy() {
             className="grid md:grid-cols-4 gap-6 mt-12"
           >
             {[
-              { icon: Users, label: 'Global Reach', value: '8M+ Users' },
-              { icon: Code, label: 'My Role', value: 'Curriculum Developer' },
-              { icon: Sparkles, label: 'Platform', value: 'Mobile App' },
-              { icon: Target, label: 'Impact', value: 'Millions Taught' }
+              { icon: ShoppingCart, label: 'Platform', value: 'Shopify' },
+              { icon: Zap, label: 'My Role', value: 'Web Developer' },
+              { icon: TrendingUp, label: 'Outcome', value: 'Successful Migration' },
+              { icon: Palette, label: 'Industry', value: 'Fashion & Lifestyle' }
             ].map((metric, index) => (
               <div
                 key={index}
                 className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-center"
               >
-                <metric.icon className="w-8 h-8 text-emerald-400 mx-auto mb-3" />
+                <metric.icon className="w-8 h-8 text-green-400 mx-auto mb-3" />
                 <div className="text-sm text-gray-400 mb-1">{metric.label}</div>
                 <div className="text-2xl font-bold text-white">{metric.value}</div>
               </div>
@@ -95,10 +95,10 @@ export default function GrasshopperCaseStudy() {
           >
             <h2 className="text-4xl font-bold text-white mb-8">The Challenge</h2>
             <p className="text-xl text-gray-300 leading-relaxed mb-6">
-              How do you make learning to code feel less like work and more like play? When I joined Google's Grasshopper team, we were tackling one of education's biggest challenges: making computer science accessible and engaging for absolute beginners worldwide.
+              Mr. Green, a Los Angeles-based fashion and lifestyle brand, was operating on Squarespace—a platform that had become limiting as the business grew. The brand needed a more robust e-commerce solution that could scale, integrate with modern tools, and provide a seamless shopping experience.
             </p>
             <p className="text-xl text-gray-300 leading-relaxed">
-              Most coding tutorials were dry, text-heavy, and intimidating. We needed to create something different—an experience that felt like a game but taught real programming concepts.
+              The challenge? Migrate an entire production e-commerce site to Shopify without disrupting sales, preserve SEO rankings, and modernize the user experience—all while maintaining the brand's distinctive high-minded aesthetic.
             </p>
           </motion.div>
         </div>
@@ -117,24 +117,24 @@ export default function GrasshopperCaseStudy() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  title: 'Curriculum Design',
-                  description: 'Developed interactive coding puzzles and challenges that progressively introduced JavaScript concepts through storytelling and visual feedback.',
-                  icon: '📚'
-                },
-                {
-                  title: 'Gamification Strategy',
-                  description: 'Designed reward systems, achievement badges, and progression mechanics that kept learners motivated and coming back.',
-                  icon: '🎮'
-                },
-                {
-                  title: 'Educational Content',
-                  description: 'Crafted clear, concise explanations of complex programming concepts accessible to complete beginners from diverse backgrounds.',
-                  icon: '✏️'
-                },
-                {
-                  title: 'User Testing & Iteration',
-                  description: 'Analyzed user data and feedback to continuously refine lessons, improving completion rates and learning outcomes.',
+                  title: 'Platform Migration',
+                  description: 'Led the complete migration from Squarespace to Shopify, transferring products, collections, customer data, and preserving URL structures for SEO continuity.',
                   icon: '🔄'
+                },
+                {
+                  title: 'Theme Development',
+                  description: 'Customized Shopify theme using Liquid, JavaScript, and CSS to match brand guidelines while implementing responsive design best practices.',
+                  icon: '🎨'
+                },
+                {
+                  title: 'Site Maintenance',
+                  description: 'Provided ongoing maintenance, troubleshooting, and feature updates to ensure optimal site performance and user experience.',
+                  icon: '🔧'
+                },
+                {
+                  title: 'E-Commerce Optimization',
+                  description: 'Implemented conversion-focused features including optimized checkout flows, product recommendations, and mobile-first design.',
+                  icon: '📈'
                 }
               ].map((contribution, index) => (
                 <motion.div
@@ -143,7 +143,7 @@ export default function GrasshopperCaseStudy() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-emerald-400/50 transition-all"
+                  className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-400/50 transition-all"
                 >
                   <div className="text-5xl mb-4">{contribution.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-4">{contribution.title}</h3>
@@ -166,31 +166,31 @@ export default function GrasshopperCaseStudy() {
             <h2 className="text-4xl font-bold text-white mb-8">The Approach</h2>
             
             <div className="space-y-8">
-              <div className="border-l-4 border-emerald-400 pl-6">
-                <h3 className="text-2xl font-bold text-white mb-4">1. Make It Visual</h3>
+              <div className="border-l-4 border-green-400 pl-6">
+                <h3 className="text-2xl font-bold text-white mb-4">1. Strategic Planning</h3>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Instead of abstract code concepts, we used colorful animations and immediate visual feedback. Write a line of code, see instant results. This created a cause-and-effect loop that made programming feel tangible and rewarding.
+                  Before touching code, I audited the existing site thoroughly—cataloging all products, collections, custom pages, and integrations. Created a detailed migration roadmap to ensure zero downtime and data integrity throughout the process.
                 </p>
               </div>
 
               <div className="border-l-4 border-cyan-400 pl-6">
-                <h3 className="text-2xl font-bold text-white mb-4">2. Tell Stories</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">2. Clean Migration</h3>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Each lesson was wrapped in a narrative. You weren't just learning loops—you were helping a character solve problems, complete missions, and unlock new abilities. Context made concepts stick.
+                  Transferred 100+ products with variants, images, and metadata. Implemented 301 redirects for all old URLs to preserve SEO equity. Set up Shopify's collection structure to match the brand's merchandising strategy while improving discoverability.
                 </p>
               </div>
 
               <div className="border-l-4 border-blue-400 pl-6">
-                <h3 className="text-2xl font-bold text-white mb-4">3. Celebrate Progress</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">3. Custom Development</h3>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Every small win was celebrated with animations, sound effects, and achievements. This positive reinforcement kept learners motivated, even when concepts got challenging.
+                  Customized the Shopify theme extensively using Liquid templating, custom CSS, and JavaScript. Built custom product pages with enhanced imagery, size guides, and styling recommendations that reflected the brand's high-end positioning.
                 </p>
               </div>
 
               <div className="border-l-4 border-purple-400 pl-6">
-                <h3 className="text-2xl font-bold text-white mb-4">4. Adapt & Iterate</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">4. Ongoing Support</h3>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  We constantly analyzed which lessons caused drop-offs and refined them. Teaching internationally taught me that clarity transcends language—good design is universal.
+                  Post-launch, provided continuous maintenance—adding new products, updating collections for seasonal drops, troubleshooting issues, and implementing improvements based on user analytics and stakeholder feedback.
                 </p>
               </div>
             </div>
@@ -209,18 +209,18 @@ export default function GrasshopperCaseStudy() {
             <h2 className="text-4xl font-bold text-white mb-8">Technologies & Tools</h2>
             <div className="flex flex-wrap gap-4">
               {[
+                'Shopify',
+                'Liquid',
                 'JavaScript',
-                'Mobile App Development',
-                'Educational Design',
-                'Gamification',
-                'User Testing',
-                'Data Analysis',
-                'Content Strategy',
-                'Cross-Cultural Design'
+                'HTML/CSS',
+                'Responsive Design',
+                'SEO Optimization',
+                'E-Commerce Analytics',
+                'Git Version Control'
               ].map((tech, index) => (
                 <span
                   key={index}
-                  className="px-6 py-3 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-400 font-semibold"
+                  className="px-6 py-3 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 font-semibold"
                 >
                   {tech}
                 </span>
@@ -242,15 +242,15 @@ export default function GrasshopperCaseStudy() {
             
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               {[
-                { value: '8M+', label: 'Active Learners' },
-                { value: '150+', label: 'Countries Reached' },
-                { value: '4.6★', label: 'App Store Rating' }
+                { value: 'Zero', label: 'Downtime During Migration' },
+                { value: '100%', label: 'SEO Rankings Preserved' },
+                { value: 'Improved', label: 'Mobile Experience' }
               ].map((stat, index) => (
                 <div
                   key={index}
-                  className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center"
+                  className="p-8 rounded-2xl bg-green-500/10 border border-green-500/30 text-center"
                 >
-                  <div className="text-5xl font-bold text-emerald-400 mb-2">{stat.value}</div>
+                  <div className="text-5xl font-bold text-green-400 mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
@@ -258,7 +258,7 @@ export default function GrasshopperCaseStudy() {
 
             <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
               <p className="text-xl text-gray-300 leading-relaxed italic">
-                "Working on Grasshopper taught me that the best educational experiences don't feel like education—they feel like play. This philosophy now drives how I approach all user interfaces: make the complex simple, the boring engaging, and the intimidating approachable."
+                "The Mr. Green project taught me the critical importance of planning in migrations—one wrong move can cost a business thousands in lost sales. It reinforced that production web development isn't just about writing code; it's about understanding business needs, minimizing risk, and delivering solutions that actually work in the real world."
               </p>
             </div>
           </motion.div>
@@ -277,20 +277,20 @@ export default function GrasshopperCaseStudy() {
             <div className="space-y-6">
               {[
                 {
-                  title: 'Design for Delight',
-                  description: 'Users remember how you make them feel. Every interaction should spark joy, curiosity, or satisfaction.'
+                  title: 'Production-Ready Mindset',
+                  description: 'Working on a live e-commerce site handling real transactions taught me to think about edge cases, test thoroughly, and always have rollback plans.'
                 },
                 {
-                  title: 'Clarity is Universal',
-                  description: 'Teaching internationally reinforced that good design transcends language barriers. Clear visuals and intuitive flows work everywhere.'
+                  title: 'Platform Expertise',
+                  description: 'Gained deep knowledge of Shopify\'s ecosystem—from Liquid templating to app integrations—making me versatile in modern e-commerce development.'
                 },
                 {
-                  title: 'Data-Driven Empathy',
-                  description: 'Numbers show where users struggle, but talking to real people reveals why. Both are essential.'
+                  title: 'Stakeholder Communication',
+                  description: 'Learned to translate technical decisions into business language, setting clear expectations and keeping non-technical stakeholders informed throughout the process.'
                 },
                 {
-                  title: 'Progressive Disclosure',
-                  description: 'Don\'t overwhelm users with everything at once. Reveal complexity gradually as they\'re ready for it.'
+                  title: 'SEO & Performance',
+                  description: 'Migrations are make-or-break for SEO. Proper redirects, URL structure, and page speed optimization are non-negotiable for e-commerce success.'
                 }
               ].map((takeaway, index) => (
                 <div
@@ -306,6 +306,41 @@ export default function GrasshopperCaseStudy() {
         </div>
       </section>
 
+      {/* Technical Highlights */}
+      <section className="py-20 px-6 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-8">Technical Highlights</h2>
+            <div className="space-y-6">
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <h3 className="text-xl font-bold text-green-400 mb-3">Custom Liquid Components</h3>
+                <p className="text-gray-300 mb-3">
+                  Developed reusable Liquid snippets for product cards, collection grids, and promotional banners—reducing code duplication and making future updates easier for the team.
+                </p>
+              </div>
+              
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <h3 className="text-xl font-bold text-green-400 mb-3">Responsive Mobile-First Design</h3>
+                <p className="text-gray-300 mb-3">
+                  Implemented mobile-first responsive design principles ensuring the site looked great and performed smoothly on all devices—critical for fashion e-commerce where mobile traffic dominates.
+                </p>
+              </div>
+              
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <h3 className="text-xl font-bold text-green-400 mb-3">Performance Optimization</h3>
+                <p className="text-gray-300 mb-3">
+                  Optimized images with lazy loading, minimized CSS/JS bundles, and leveraged Shopify's CDN for fast global delivery—directly impacting conversion rates.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Navigation */}
       <section className="py-20 px-6 border-t border-gray-700/20">
         <div className="max-w-6xl mx-auto">
@@ -314,7 +349,7 @@ export default function GrasshopperCaseStudy() {
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
               <div className="text-left">
                 <div className="text-sm">Previous Project</div>
-                <div className="font-semibold">Mr. Green</div>
+                <div className="font-semibold">Pork Hoppin'</div>
               </div>
             </button>
 
@@ -328,7 +363,7 @@ export default function GrasshopperCaseStudy() {
             <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors group">
               <div className="text-right">
                 <div className="text-sm">Next Project</div>
-                <div className="font-semibold">Google CS First</div>
+                <div className="font-semibold">Google Grasshopper</div>
               </div>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
